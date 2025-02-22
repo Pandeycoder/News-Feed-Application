@@ -19,6 +19,7 @@ function App() {
             <Route path="/trending" element={<Trending />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/news/:id" element={<NewsDetail />} />
+
           </Routes>
         </div>
       </BrowserRouter>
