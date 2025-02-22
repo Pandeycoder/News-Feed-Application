@@ -1,6 +1,7 @@
 import React from "react";
 import { NewsCard } from "../components/NewsCard";
 import { CategoryFilter } from "../components/CategoryFilter";
+import Footer from "../components/Footer";
 
 // Temporary mock data
 const mockNews = {
@@ -18,28 +19,31 @@ const mockNews = {
 
 export const Home = () => {
   return (
-    <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-      <CategoryFilter />
+    <>
+      <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <CategoryFilter />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <NewsCard news={mockNews} />
-        <NewsCard
-          news={{
-            ...mockNews,
-            id: "2",
-            title: "SpaceX Launches New Satellite",
-            category: "Science",
-          }}
-        />
-        <NewsCard
-          news={{
-            ...mockNews,
-            id: "3",
-            title: "Global Markets Update",
-            category: "Business",
-          }}
-        />
-      </div>
-    </main>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <NewsCard news={mockNews} />
+          <NewsCard
+            news={{
+              ...mockNews,
+              id: "2",
+              title: "SpaceX Launches New Satellite",
+              category: "Science",
+            }}
+          />
+          <NewsCard
+            news={{
+              ...mockNews,
+              id: "3",
+              title: "Global Markets Update",
+              category: "Business",
+            }}
+          />
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 };
