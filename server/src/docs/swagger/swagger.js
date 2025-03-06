@@ -4,7 +4,9 @@ import swaggerJSDoc from "swagger-jsdoc";
 
 dotenv.config();
 // Get the directory name for the current module
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(
+  new URL(import.meta.url).pathname.replace(/^\/[A-Za-z]:/, "")
+);
 
 // Dynamically resolve the path to the .env file (relative to the current module's directory)
 const envPath = path.resolve(__dirname, "../../../.env");

@@ -4,17 +4,17 @@ import { DemoController } from "../../controllers/news/demo.js"; // Correct impo
 
 const router = express.Router();
 
-// /**
-//  * @swagger
-//  * /demo:
-//  *   get:
-//  *     summary: Retrieve demo data
-//  *     tags:
-//  *       - Demo
-//  *     responses:
-//  *       200:
-//  *         description: Success
-//  */
+/**
+ * @swagger
+ * /demo:
+ *   get:
+ *     summary: Retrieve demo data
+ *     tags:
+ *       - Demo
+ *     responses:
+ *       200:
+ *         description: Success
+ */
 router.get("/", DemoController);
 
 export default router;
